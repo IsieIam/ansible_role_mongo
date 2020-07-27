@@ -2,10 +2,8 @@ dist: trusty
 sudo: required
 language: bash
 before_install:
-  - echo "hello world"
-  #- curl https://raw.githubusercontent.com/express42/otus-homeworks/2020-05/run.sh | bash
-  # run terraform, tflint, ansible-lint, packer validate
-  # tests use the same docker container as the first task for using the same infra
-  #- ./tests/run.sh
-  #- if [[ ( $TRAVIS_BRANCH == "master" && $TRAVIS_EVENT_TYPE == "push" ) || $TRAVIS_EVENT_TYPE == "pull_request" ]]; then ./tests/run.sh; else echo 'skipping test'; fi
-
+- echo "hello world"
+notifications:
+  slack:
+    rooms:
+      secure: LQR7G5d/p6biARVC5JjJtwqaImNaqgFaawzJ7TnCdTeZ5vnYgTtjsOZPeo/LRtZShfT+aB9Fi3J8ro7H2vzGVUf3+LFB0kqCBZYfhEMG0usUKpXIOB9zVjwDYlKmuCkH6fGfbhTY2hXCSsxNaz8b4s/SqAQmjfSDw1tNYYk33CL8EzlYM17UBvsHjksYXpG7OraTOJS8i1jKr0ebOEi6vcJFBVnXOuHCbv5ybKRF8DEhf8uCkQWvglqQqs0PQFNgxarcNOFWFnsISusTDMgPvkalaFNyDKTZ3ij/UC9hxSxVwAAv26tb7XJKE8USlmciJJ5rVhu6u5HYZ7TYHA+EHBPBdJfL6T4ool/1Dm49cNGHBt4AOH/4vDoB8u1nilYjDmubKjGEq8YmD5c4YEUKOWKIZAPnQEw2uZDfnLqXMacwJ3vi7+0a55yoUd/ciBjUhOweQZvMcU9DbSLvCHtzq2WQ+OjOT+Kr+WlSdmKqIt3fRuT+Ipv1UVEeNRSpgGOQuQnnzPUuXkVZzMD0gOWRPM3yAunVn37OGjyoTNSYZ5IhB/X4sU0uJo258MIJddauAhDmt60dpXUsAgD0Bh+GH8UuUUDZLr1M0NmPTrBW5jIKU1D1yXlHNZhhPJlT44TzwwKfkAiPnsiqbewA12QDeg9NMuK34N63RutQ9Gy2wTk=
